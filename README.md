@@ -1,23 +1,48 @@
+Library Resource Management System (SQL)
 
-Overview
-This project involves the development of a Library Resource Management System using SQL. The system is designed to efficiently manage library resources, including books, members, and borrowing transactions. It provides functionalities for adding, updating, and querying information related to the library's operations.
+This project involves the design and implementation of a relational database system to manage library resources. It provides SQL-based functionality to track books, members, borrow and return transactions, and generate useful insights from library data.
+
+Objective
+	•	Streamline library operations using a structured SQL database
+	•	Manage book inventory, member details, and borrowing/return activity
+	•	Provide reports and queries to support day-to-day library administration
 
 Project Description
-The Library Resource Management System is a database application designed to streamline the management of library resources. It allows librarians to manage book inventories, track member information, and handle borrowing and returning of books. The system aims to improve the efficiency and accuracy of library operations.
+
+The Library Resource Management System is a PostgreSQL-based application focused on backend logic. It supports:
+	•	Adding, updating, and deleting book and member records
+	•	Recording borrow and return activity
+	•	Generating reports on book availability, late returns, borrowing frequency, and member activity
 
 Database Schema
-The database schema includes the following tables:
 
-Books: Contains information about books in the library.
-Members: Stores member details.
-Borrowing: Tracks borrowing transactions.
-Returns: Tracks return transactions.
+The system includes four core tables:
+	•	Books: Stores book ID, title, author, genre, publication year, and availability status
+	•	Members: Stores member ID, name, contact info, and membership status
+	•	Borrowing: Logs when a book is borrowed, by whom, and on what date
+	•	Returns: Tracks book return dates and calculates delays or fines if applicable
 
-Results
-The project provides a fully functional database for managing library resources.
-SQL scripts for common library operations.
-Reports and queries for analyzing library data.
+Features and Results
+	•	Fully normalized database schema (3NF)
+	•	SQL scripts to:
+	•	Add new books or members
+	•	Record borrow and return events
+	•	Check book availability
+	•	List overdue books
+	•	Generate member borrowing history
+	•	Pre-written queries and sample reports to analyze:
+	•	Most borrowed books
+	•	Active vs inactive members
+	•	Book return patterns and delays
+
 Tools and Technologies
-Database: PostgreSQL
-Development Tools: SQL, pgAdmin, DBeaver
-Libraries: None (pure SQL project)
+	•	Database: PostgreSQL
+	•	Languages: SQL (DDL and DML)
+	•	Tools Used: pgAdmin, DBeaver
+	•	Libraries: None — this is a pure SQL backend project
+
+Future Enhancements
+	•	Add triggers for automatic fine calculation
+	•	Implement stored procedures for borrowing logic
+	•	Build a front-end interface using Python (Flask) or JavaScript (React)
+	•	Include user authentication and role-based access
